@@ -570,12 +570,6 @@ section {
     gap: 1.5rem;
   }
 
-  .a-propos-grille,
-  .contact-grille {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .hero-boutons {
     flex-direction: column;
     gap: 1rem;
@@ -585,10 +579,26 @@ section {
     max-width: 100%;
   }
 
-  .competences-grille {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  .hero-nom {
+    font-size: clamp(3rem, 6vw, 4.2rem);
   }
 
+  .a-propos-grille,
+  .contact-grille {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .a-propos-image {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .a-propos-infos {
+    grid-template-columns: 1fr;
+  }
+
+  .competences-grille,
   .projets-grille {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -596,7 +606,11 @@ section {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
+  }
+
+  nav {
+    padding: 0.9rem 1rem;
   }
 
   .nav-liens {
@@ -605,7 +619,7 @@ section {
     top: 100%; left: 0; right: 0;
     background: var(--couleur-primaire);
     flex-direction: column;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1.2rem;
     gap: 1rem;
     border-top: 1px solid rgba(255,255,255,0.08);
   }
@@ -614,7 +628,7 @@ section {
   .nav-hamburger { display: flex; }
 
   .nav-logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .nav-liens a {
@@ -622,34 +636,130 @@ section {
   }
 
   .hero-nom {
-    font-size: 2.5rem;
-  }
-
-  .hero-boutons {
-    flex-direction: column;
-    gap: 0.75rem;
+    font-size: 2.4rem;
   }
 
   .hero-description {
     font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-boutons .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .a-propos-grille,
   .contact-grille {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .a-propos-image {
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
   }
 
-  .competences-grille {
+  .a-propos-image::before {
+    top: 15px; left: 15px;
+    right: -15px; bottom: -15px;
+  }
+
+  .a-propos-infos {
     grid-template-columns: 1fr;
   }
 
+  .competence-carte,
+  .projet-carte,
+  .info-item,
+  .contact-info,
+  .formulaire {
+    width: 100%;
+  }
+
+  .competences-grille,
   .projets-grille {
     grid-template-columns: 1fr;
+  }
+
+  .projet-image {
+    height: 180px;
+  }
+
+  .projet-corps {
+    padding: 1.4rem;
+  }
+
+  .projet-technologies {
+    gap: 0.4rem;
+  }
+
+  .contact-info,
+  .formulaire {
+    width: 100%;
+  }
+
+  .formulaire {
+    gap: 1rem;
+  }
+
+  .champ-groupe input,
+  .champ-groupe textarea {
+    font-size: 0.95rem;
+  }
+
+  .champ-groupe textarea {
+    min-height: 120px;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --transition: all 0.25s ease;
+  }
+
+  .container {
+    padding: 0 0.9rem;
+  }
+
+  nav {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .hero-salutation {
+    letter-spacing: 2px;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+  }
+
+  .hero-boutons {
+    gap: 0.75rem;
+  }
+
+  .section-titre {
+    font-size: 2rem;
+  }
+
+  .section-sous-titre {
+    margin-bottom: 2rem;
+  }
+
+  .contact-grille {
+    gap: 1.5rem;
+  }
+
+  .reseau-lien {
+    font-size: 0.9rem;
+  }
+
+  .projet-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
   }
 }
