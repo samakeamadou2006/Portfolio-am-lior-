@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Calculatrice UVCI</title>
+  <desc id="desc">Logo Calculatrice UVCI officiel, affiché sans déformation avec un cadrage circulaire.</desc>
+  <defs>
+    <clipPath id="logo-circle">
+      <circle cx="512" cy="512" r="480"/>
+    </clipPath>
+    <filter id="logo-shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#111827" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <circle cx="512" cy="512" r="492" fill="#ffffff" filter="url(#logo-shadow)"/>
+  <circle cx="512" cy="512" r="486" fill="none" stroke="rgba(255,255,255,.78)" stroke-width="12"/>
+  <image
+    href="calculatrice.uvci.logo.png"
+    x="32"
+    y="32"
+    width="960"
+    height="960"
+    preserveAspectRatio="xMidYMid meet"
+    clip-path="url(#logo-circle)" />
+</svg>
