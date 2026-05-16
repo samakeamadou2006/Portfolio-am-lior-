@@ -58,19 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (formulaire) {
     formulaire.addEventListener('submit', e => {
       e.preventDefault();
-      const bouton = formulaire.querySelector('button[type="submit"]');
-      if (!bouton) return;
+      const nom = formulaire.querySelector('#nom')?.value.trim() || '';
+      const email = formulaire.querySelector('#email')?.value.trim() || '';
+      const message = formulaire.querySelector('#message')?.value.trim() || '';
 
-      bouton.textContent = 'Message envoyé ✓';
-      bouton.style.background = '#2d7a4f';
-      bouton.disabled = true;
-
-      setTimeout(() => {
-        formulaire.reset();
-        bouton.textContent = 'Envoyer le message';
-        bouton.style.background = '';
-        bouton.disabled = false;
-      }, 3000);
+      const subject = encodeURIComponent(`Message de ${nom || 'contact'}`);
+      const body = encodeURIComponent(`Nom : ${nom}\nEmail : ${email}\n\nMessage :\n${message}`);
+      window.location.href = `mailto:samakeamadou2006@gmail.com?subject=${subject}&body=${body}`;
     });
   }
 });

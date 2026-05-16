@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Fichier CSS externe -->
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -184,6 +184,9 @@
             <h3>Travaillons ensemble</h3>
             <p>Disponible pour des stages, des projets collaboratifs ou simplement pour échanger sur le développement web.</p>
             <nav class="contact-reseaux" aria-label="Réseaux sociaux">
+              <a href="https://wa.me/2250565487168" target="_blank" rel="noopener" class="reseau-lien">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp de Samaké
+              </a>
               <a href="https://github.com/samakeamadou2006" target="_blank" rel="noopener" class="reseau-lien">
                 <i class="fa-brands fa-github" aria-hidden="true"></i> Samaké Amadou sur GitHub
               </a>
@@ -195,7 +198,7 @@
               </a>
             </nav>
           </div>
-          <form class="formulaire" id="formulaire-contact" novalidate>
+          <form class="formulaire" id="formulaire-contact" action="mailto:samakeamadou2006@gmail.com" method="POST" enctype="text/plain" novalidate>
             <div class="champ-groupe">
               <label for="nom">Nom complet</label>
               <input type="text" id="nom" name="nom" placeholder="Donald Trump" required />
@@ -223,7 +226,7 @@
   </footer>
 
   <!-- Fichier JS externe — toujours en bas du body -->
-  <script src="portfolio.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>

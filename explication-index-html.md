@@ -1,4 +1,4 @@
-# Explication ligne par ligne de `portfolio.html`
+# Explication ligne par ligne de `index.html`
 
 Ce document explique le fichier HTML du portfolio pour un débutant.
 
@@ -31,14 +31,14 @@ Ce document explique le fichier HTML du portfolio pour un débutant.
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 ```
 
 - Le premier `<link>` optimise le chargement des polices Google.
 - Le deuxième charge les polices `Playfair Display` et `DM Sans`.
 - Le troisième charge les icônes Font Awesome.
-- Le dernier charge le fichier CSS local `portfolio.css`.
+- Le dernier charge le fichier CSS local `style.css`.
 
 ## 4. Début du corps de la page
 
@@ -288,7 +288,7 @@ Ce document explique le fichier HTML du portfolio pour un débutant.
     <p>© 2026 <span>Samaké Amadou</span> — Tous droits réservés. </p>
   </footer>
 
-  <script src="portfolio.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 ```

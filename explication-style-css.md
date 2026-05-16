@@ -1,4 +1,4 @@
-# Explication ligne par ligne de `portfolio.css`
+# Explication ligne par ligne de `style.css`
 
 Ce document explique le fichier CSS du portfolio pour un débutant.
 

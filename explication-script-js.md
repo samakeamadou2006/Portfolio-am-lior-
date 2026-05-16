@@ -1,6 +1,6 @@
-# Explication ligne par ligne de `portfolio.js`
+# Explication ligne par ligne de `script.js`
 
-Ce document explique le code JavaScript de `portfolio.js` comme si tu étais débutant.
+Ce document explique le code JavaScript de `script.js` comme si tu étais débutant.
 
 ## 1. Attendre que la page soit chargée
 
@@ -174,42 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (formulaire) {
     formulaire.addEventListener('submit', e => {
       e.preventDefault();
+      const nom = formulaire.querySelector('#nom')?.value.trim() || '';
+      const email = formulaire.querySelector('#email')?.value.trim() || '';
+      const message = formulaire.querySelector('#message')?.value.trim() || '';
+
+      const subject = encodeURIComponent(`Message de ${nom || 'contact'}`);
+      const body = encodeURIComponent(`Nom : ${nom}\nEmail : ${email}\n\nMessage :\n${message}`);
+      window.location.href = `mailto:samakeamadou2006@gmail.com?subject=${subject}&body=${body}`;
 ```
 
 - Si le formulaire existe, on écoute l'événement d'envoi.
 - `preventDefault()` empêche le navigateur de recharger la page.
-- On peut alors contrôler ce qui se passe après le clic.
-
-```js
-      const bouton = formulaire.querySelector('button[type="submit"]');
-      if (!bouton) return;
-```
-
-- On récupère le bouton Envoyer à l'intérieur du formulaire.
-- Si le bouton n'existe pas, la fonction s'arrête.
-
-```js
-      bouton.textContent = 'Message envoyé ✓';
-      bouton.style.background = '#2d7a4f';
-      bouton.disabled = true;
-```
-
-- On change le texte du bouton pour indiquer le succès.
-- On change sa couleur de fond.
-- On désactive le bouton pour éviter plusieurs clics.
-
-```js
-      setTimeout(() => {
-        formulaire.reset();
-        bouton.textContent = 'Envoyer le message';
-        bouton.style.background = '';
-        bouton.disabled = false;
-      }, 3000);
-```
-
-- Après 3 secondes, on remet le formulaire à zéro.
-- On restitue le texte original du bouton.
-- On remet la couleur par défaut et on réactive le bouton.
+- On récupère les valeurs des champs `nom`, `email` et `message`.
+- On construit un lien `mailto:` avec ces informations.
+- `window.location.href = 'mailto:...'` ouvre le client de messagerie de l'utilisateur.
+- Cela permet d'envoyer le message via l'application mail installée sur l'ordinateur ou le téléphone.
 
 ## 9. Fin du script
 
